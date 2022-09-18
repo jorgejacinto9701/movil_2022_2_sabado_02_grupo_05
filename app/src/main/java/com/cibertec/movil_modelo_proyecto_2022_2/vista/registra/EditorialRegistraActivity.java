@@ -11,7 +11,7 @@ public class EditorialRegistraActivity extends NewAppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_libro_registra);
+        setContentView(R.layout.activity_editorial_registra);
 
 
     }
