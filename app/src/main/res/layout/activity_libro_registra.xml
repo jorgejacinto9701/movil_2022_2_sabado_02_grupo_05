@@ -20,6 +20,68 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="Titulo"/>
+
+    <EditText
+        android:id="@+id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="Años"/>
+
+    <EditText
+        android:id="@+id/txtAños"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="Serie"/>
+
+    <EditText
+        android:id="@+id/txtSerie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="Categoria"/>
+
+    <Spinner
+        android:id="@+id/spnCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"/>
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10px"
+        android:layout_marginLeft="120dp"
+        android:text="Registrar"/>
+
+
 
 
 
