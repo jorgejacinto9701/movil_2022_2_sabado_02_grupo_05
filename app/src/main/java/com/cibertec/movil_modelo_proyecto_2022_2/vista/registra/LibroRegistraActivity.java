@@ -9,6 +9,7 @@ import android.widget.Spinner;
 
 import com.cibertec.movil_modelo_proyecto_2022_2.R;
 import com.cibertec.movil_modelo_proyecto_2022_2.entity.Categoria;
+import com.cibertec.movil_modelo_proyecto_2022_2.entity.Grado;
 import com.cibertec.movil_modelo_proyecto_2022_2.entity.Libro;
 import com.cibertec.movil_modelo_proyecto_2022_2.service.ServiceCategoria;
 import com.cibertec.movil_modelo_proyecto_2022_2.service.ServiceLibro;
@@ -53,23 +54,24 @@ public class LibroRegistraActivity extends NewAppCompatActivity {
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Integer codigo = Integer.valueOf(txtcodigo.getText().toString());
-                String titulo = txttitulo.getText().toString();
+                 String titulo = txttitulo.getText().toString();
                 Integer años = Integer.valueOf(txtaños.getText().toString());
                 String serie = txtserie.getText().toString();
                 String categoria = spnCategoria.getSelectedItem().toString();
 
+                String idCategoria = categoria.split(":")[0];
 
-
+                Categoria objCategoria = new Categoria();
+                objCategoria.setIdCategoria(Integer.parseInt(idCategoria.trim()));
 
 
                 Libro obj = new Libro();
                 obj.setTitulo(titulo);
-                obj.setAños(años);
+                obj.setAnio(años);
                 obj.setSerie(serie);
                 obj.setFechaRegistro(FunctionUtil.getFechaActualStringDateTime());
-                obj.setestado(1);
-                obj.setCategoria(categoria);
+                obj.setEstado(1);
+                obj.setCategoria(objCategoria);
 
                 RegistrarLibro(obj);
             }
@@ -86,7 +88,7 @@ public class LibroRegistraActivity extends NewAppCompatActivity {
                     mensajeAlert("Los datos se cargaron");
                     List<Categoria> lstCategoria = response.body();
                     for (Categoria cate : lstCategoria){
-                    categoria.add(cate.getDescripcion());
+                    categoria.add(cate.getIdCategoria()+":"+ cate.getDescripcion());
                     }
                     adapter.notifyDataSetChanged();
                 }

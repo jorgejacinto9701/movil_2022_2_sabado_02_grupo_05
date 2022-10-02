@@ -78,7 +78,7 @@ public class AutorRegistraActivity extends NewAppCompatActivity {
                    String idGrado = grado.split(":")[0];
 
                    Grado objGra = new Grado();
-                   objGra.setIdGrado(Integer.parseInt(idGrado));
+                   objGra.setIdGrado(Integer.parseInt(idGrado.trim()));
 
                    Autor objAut = new Autor();
                    objAut.setNombres(nom);

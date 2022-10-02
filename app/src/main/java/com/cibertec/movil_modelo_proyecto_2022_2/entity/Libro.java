@@ -2,62 +2,44 @@ package com.cibertec.movil_modelo_proyecto_2022_2.entity;
 
 public class Libro {
 
-    private int Codigo;
-    private String Titulo;
-    private int Años;
-    private String Serie;
+    private int idLibro;
+    private String titulo;
+    private int anio;
+    private String serie;
     private String fechaRegistro;
     private int estado;
-    private String Categoria;
+    private Categoria categoria;
+
+    public int getIdLibro() {
+        return idLibro;
+    }
+
+    public void setIdLibro(int idLibro) {
+        this.idLibro = idLibro;
+    }
 
     public String getTitulo() {
-        return Titulo;
+        return titulo;
     }
 
     public void setTitulo(String titulo) {
-        Titulo = titulo;
+        this.titulo = titulo;
     }
 
-    public int getestado() {
-        return estado;
+    public int getAnio() {
+        return anio;
     }
 
-    public void setestado(int estado) {
-        estado = estado;
-    }
-
-    public int getCodigo() {
-        return Codigo;
-    }
-
-    public void setCodigo(int Codigo) {
-        this.Codigo = Codigo;
+    public void setAnio(int anio) {
+        this.anio = anio;
     }
 
     public String getSerie() {
-        return Serie;
+        return serie;
     }
 
     public void setSerie(String serie) {
-        Serie = serie;
-    }
-
-    private String Titutlo;
-
-    public String getTitutlo() {
-        return Titutlo;
-    }
-
-    public void setTitutlo(String titutlo) {
-        Titutlo = titutlo;
-    }
-
-    public int getAños() {
-        return Años;
-    }
-
-    public void setAños(int años) {
-        Años = años;
+        this.serie = serie;
     }
 
     public String getFechaRegistro() {
@@ -68,14 +50,19 @@ public class Libro {
         this.fechaRegistro = fechaRegistro;
     }
 
-    public String getCategoria() {
-        return Categoria;
+    public int getEstado() {
+        return estado;
     }
 
-    public void setCategoria(String categoria) {
-        Categoria = categoria;
+    public void setEstado(int estado) {
+        this.estado = estado;
     }
 
+    public Categoria getCategoria() {
+        return categoria;
+    }
 
-
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
 }

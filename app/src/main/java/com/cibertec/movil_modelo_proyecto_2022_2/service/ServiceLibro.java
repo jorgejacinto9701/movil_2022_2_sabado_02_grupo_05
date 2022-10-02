@@ -8,7 +8,7 @@ import retrofit2.http.POST;
 
 public interface ServiceLibro {
 
-    @POST("Libro")
+    @POST("libro")
     public Call<Libro> insertarLibro(@Body Libro obj);
 
 }
