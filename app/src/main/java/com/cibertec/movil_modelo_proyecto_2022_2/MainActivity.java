@@ -24,64 +24,12 @@ import retrofit2.Response;
 
 public class    MainActivity extends NewAppCompatActivity {
 
-    EditText txtNombre;
-    Button btnFiltrar;
 
-    ListView lstConsultaProveedor;
-    ArrayList<Proveedor> data = new ArrayList<Proveedor>();
-    ProveedorAdapter adaptador;
-    ServiceProveedor api;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_proveedor_consulta);
-
-        lstConsultaProveedor = findViewById(R.id.idConsProvtListView);
-        adaptador = new ProveedorAdapter(this, R.layout.activity_proveedor_consulta_item, data);
-        lstConsultaProveedor.setAdapter(adaptador);
-
-        api = ConnectionRest.getConnection().create(ServiceProveedor.class);
-
-        btnFiltrar = findViewById(R.id.btnConsListarProv);
-        btnFiltrar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String filro = txtNombre.getText().toString();
-                consulta(filro);
-
-            }
-        });
-
-
-    }
-
-
-
-    public void consulta (String filtro) {
-        Call<List<Proveedor>> call = api.listaPorRazonSocial(filtro);
-        call.enqueue(new Callback<List<Proveedor>>() {
-            @Override
-            public void onResponse(Call<List<Proveedor>> call, Response<List<Proveedor>> response) {
-                if (response.isSuccessful()){
-                    List<Proveedor> lstSalida =response.body();
-                    data.clear();
-                    data.addAll(lstSalida);
-                    adaptador.notifyDataSetChanged();
-
-
-                }
-            }
-
-            @Override
-            public void onFailure(Call<List<Proveedor>> call, Throwable t) {
-
-            }
-        });
-
-
-
-
+        setContentView(R.layout.activity_main);
 
 
 
@@ -89,14 +37,6 @@ public class    MainActivity extends NewAppCompatActivity {
 
 
 
-    public void mensajeAlert(String msg){
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
-        alertDialog.setMessage(msg);
-        alertDialog.setCancelable(true);
-        alertDialog.show();
-
-
-    }
 
 
 
