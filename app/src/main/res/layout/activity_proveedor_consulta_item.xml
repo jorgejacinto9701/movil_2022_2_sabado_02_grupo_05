@@ -3,6 +3,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
+    android:weightSum="9"
+    android:padding="10dp"
+
     >
 
-</LinearLayout>
+    <TextView
+
+        android:id="@+id/idItemProveedor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+
+        />
+
+    <TextView
+
+        android:id="@+id/NombreItemProveedor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:textSize="16sp"
+        android:textStyle="bold"
+
+        />
+
+    <TextView
+
+        android:id="@+id/RsItemProveedor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:textSize="16sp"
+        android:textStyle="bold"
+
+        />
+
+
+
+

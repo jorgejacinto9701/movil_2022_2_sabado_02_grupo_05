@@ -16,7 +16,30 @@
         android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold" />
+    <EditText
+        android:id="@+id/txtRegProvRS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:layout_margin="5dp"/>
 
+
+    <Button
+        android:id="@+id/btnConsListarProv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:layout_margin="5dp"
+        android:text="Filtrar"/>
+
+    <ListView
+        android:id="@+id/idConsProvtListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="4dp"
+        android:layout_margin="5dp"
+        android:divider="@color/black"
+        android:dividerHeight="1dp"/>
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>
