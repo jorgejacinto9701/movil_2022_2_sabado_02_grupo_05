@@ -18,7 +18,7 @@ public class ValidacionUtil {
     public static final String CORREO_GMAIL = "[a-zA-Z]+(@gmail.com)";
 
     public static final String NOMBRE = "[a-zA-ZáéíóúñüÁÉÍÓÚÑÜ\\s]{3,30}";
-    public static final String DIRECCION = "[a-zA-ZáéíóúñüÁÉÍÓÚÑÜ\\s0-9]{3,30}";
+    public static final String DIRECCION = "[a-zA-ZáéíóúñüÁÉÍÓÚÑÜ\\s0-9.]{3,30}";
     public static final String EDAD = "\\d{2}";
     public static final String SEXO = "[FM]";
     public static final String NUM= "[0-9]{9}";
